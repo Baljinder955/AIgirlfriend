@@ -20,6 +20,7 @@ extension ProfileVC:ProfileDelegates {
         let viewController = getStoryboard(.main).instantiateViewController(withIdentifier: ViewControllers.messageVC) as! MessagesVC
         viewController.objMessagesVM.characterId = objHomeDataModel?.id ?? ""
         viewController.objMessagesVM.otherCharName = objHomeDataModel?.name ?? ""
+        viewController.objMessagesVM.fileName = objHomeDataModel?.filename ?? ""
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

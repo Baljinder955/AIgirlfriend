@@ -28,6 +28,7 @@ class MessagesVM: NSObject {
     
     // MARK: - Variable Declaration
     var characterId = String()
+    var fileName = String()
     var otherCharName = String()
     var arrMessages = [MessageModel]()
     var chatRoomId = String()

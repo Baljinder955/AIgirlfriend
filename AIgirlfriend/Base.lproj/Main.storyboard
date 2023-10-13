@@ -1055,7 +1055,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Vq-kL-0RF">
-                                        <rect key="frame" x="0.0" y="65" width="414" height="619"/>
+                                        <rect key="frame" x="0.0" y="65" width="414" height="644"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessagesRecieverTVC" rowHeight="97" id="9dL-MX-UXZ" customClass="MessagesRecieverTVC" customModule="AIgirlfriend" customModuleProvider="target">
@@ -1294,10 +1294,10 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiveSupportIsTyping.gif" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-fc-Sy4">
-                                        <rect key="frame" x="15" y="684" width="90" height="45"/>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiveSupportIsTyping.gif" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-fc-Sy4">
+                                        <rect key="frame" x="15" y="714" width="90" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="RTk-DT-SVR"/>
+                                            <constraint firstAttribute="height" constant="20" id="RTk-DT-SVR"/>
                                             <constraint firstAttribute="width" constant="90" id="ep9-Ug-vZn"/>
                                         </constraints>
                                     </imageView>
@@ -1443,11 +1443,11 @@
                                     <constraint firstAttribute="bottom" secondItem="0Wr-v0-Gjb" secondAttribute="bottom" constant="10" id="d8M-F8-eZe"/>
                                     <constraint firstAttribute="trailing" secondItem="o13-ny-B5R" secondAttribute="trailing" id="gl7-0l-fD6"/>
                                     <constraint firstItem="o13-ny-B5R" firstAttribute="leading" secondItem="wxP-L0-RBC" secondAttribute="leading" id="lzk-pb-s1y"/>
-                                    <constraint firstItem="0Wr-v0-Gjb" firstAttribute="top" secondItem="1Ck-fc-Sy4" secondAttribute="bottom" constant="10" id="qB3-8O-X1a"/>
+                                    <constraint firstItem="0Wr-v0-Gjb" firstAttribute="top" secondItem="1Ck-fc-Sy4" secondAttribute="bottom" constant="5" id="qB3-8O-X1a"/>
                                     <constraint firstItem="zke-gv-hm9" firstAttribute="top" secondItem="o13-ny-B5R" secondAttribute="bottom" constant="10" id="qj3-he-n4s"/>
                                     <constraint firstItem="0Wr-v0-Gjb" firstAttribute="leading" secondItem="wxP-L0-RBC" secondAttribute="leading" constant="20" id="r50-rS-8PM"/>
                                     <constraint firstItem="zke-gv-hm9" firstAttribute="leading" secondItem="wxP-L0-RBC" secondAttribute="leading" constant="25" id="uVc-w9-eHq"/>
-                                    <constraint firstItem="1Ck-fc-Sy4" firstAttribute="top" secondItem="3Vq-kL-0RF" secondAttribute="bottom" id="wYO-cu-ZHm"/>
+                                    <constraint firstItem="1Ck-fc-Sy4" firstAttribute="top" secondItem="3Vq-kL-0RF" secondAttribute="bottom" constant="5" id="wYO-cu-ZHm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1676,13 +1676,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gu-jn-xdl">
-                                <rect key="frame" x="10" y="178" width="394" height="34.5"/>
+                                <rect key="frame" x="10" y="178" width="394" height="33"/>
                                 <fontDescription key="fontDescription" name="MontserratRoman-SemiBold" family="Montserrat" pointSize="28"/>
                                 <color key="textColor" red="0.27594261460000002" green="0.27594261460000002" blue="0.27594261460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_network_error" translatesAutoresizingMaskIntoConstraints="NO" id="KQL-CN-IVS">
-                                <rect key="frame" x="132" y="242.5" width="150" height="150"/>
+                                <rect key="frame" x="132" y="241" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FPk-sm-I5s"/>
                                     <constraint firstAttribute="width" constant="150" id="gao-bQ-HnQ"/>
@@ -1694,13 +1694,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet not  availble, Cross check your internet connectivity and try again." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkN-Fc-Vsd">
-                                <rect key="frame" x="10" y="422.5" width="394" height="49"/>
+                                <rect key="frame" x="10" y="421" width="394" height="47"/>
                                 <fontDescription key="fontDescription" name="MontserratRoman-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-yG-CZT">
-                                <rect key="frame" x="20" y="501.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="498" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.29318673340000001" green="0.16424869510000001" blue="0.06180362776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LQk-qN-AKW"/>

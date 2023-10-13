@@ -58,22 +58,19 @@ extension MessagesVC : MessageDelegate {
     
     // MARK: - Send Message Function
     func sendMessage(_ text: String) {
-        self.vwProperties.constHeightImgVwTyping.constant = 50
-        showTypingGifMethod(isHide: false)
         self.vwProperties.messageTxtVw.resignFirstResponder()
         objMessagesVM.isNewMsg = true
+        showTypingGifMethod(isHide: false)
         let requestEmpty = MessageModel(textMessage: text,isSender: true, dateTime: getStringFromDate(date: Date(), needFormat: "hh:mm a"))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            self.vwProperties.imgVwTyping.isHidden = true
-            self.vwProperties.constHeightImgVwTyping.constant = 0
         self.objMessagesVM.arrMessages.append(requestEmpty)
         self.vwProperties.messagesTblVw.reloadData()
             let param = [
-                "character":"\(self.objMessagesVM.characterId)",
+                "character":"\(self.objMessagesVM.fileName)",
                 "token":"\(DataManager.accessToken)",
                 "user_input":"\(text)",
                 "your_name":"\(DataManager.userFirstName)"
             ]
+            scrollToBottomTblVw(false)
             self.wsForChat.sendMessgaeApiMethod(param)
             self.vwProperties.messageTxtVw.text = ""
             self.vwProperties.messageTxtVw.isUserInteractionEnabled = false
@@ -82,7 +79,6 @@ extension MessagesVC : MessageDelegate {
                 self.vwProperties.messagesTblVw.reloadRows(at: [indexPath], with: .none)
                 self.vwProperties.messagesTblVw.scrollToRow(at: indexPath, at: .bottom, animated: false)
             }
-        }
     }
     
     // MARK: Audio Recording Button Clicled

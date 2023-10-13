@@ -48,6 +48,7 @@ class ChatVC: UIViewController {
             let viewController = getStoryboard(.main).instantiateViewController(withIdentifier: ViewControllers.messageVC) as! MessagesVC
             viewController.objMessagesVM.characterId = (detailDict?.character ?? "")
             viewController.objMessagesVM.otherCharName = (detailDict?.characterObj?.name ?? "")
+            viewController.objMessagesVM.fileName = (detailDict?.characterObj?.filename ?? "")
             viewController.objMessagesVM.isAutoPlayMessage = DataManager.isMessageAutoPlay
             self.navigationController?.pushViewController(viewController, animated: true)
         }

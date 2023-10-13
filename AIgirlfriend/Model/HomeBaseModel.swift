@@ -14,6 +14,7 @@ struct HomeBaseModel : Codable {
     let image_bot : Bool?
     let chat_bot : Bool?
     let voice : Bool?
+    let filename : String?
     
     enum CodingKeys: String, CodingKey {
         
@@ -23,6 +24,7 @@ struct HomeBaseModel : Codable {
         case image_bot = "image_bot"
         case chat_bot = "chat_bot"
         case voice = "voice"
+        case filename = "filename"
     }
     
     init(from decoder: Decoder) throws {
@@ -33,6 +35,7 @@ struct HomeBaseModel : Codable {
         image_bot = try values.decodeIfPresent(Bool.self, forKey: .image_bot)
         chat_bot = try values.decodeIfPresent(Bool.self, forKey: .chat_bot)
         voice = try values.decodeIfPresent(Bool.self, forKey: .voice)
+        filename = try values.decodeIfPresent(String.self, forKey: .filename)
     }
     
 }

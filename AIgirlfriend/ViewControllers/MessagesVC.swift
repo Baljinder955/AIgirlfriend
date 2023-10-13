@@ -153,7 +153,6 @@ class MessagesVC: UIViewController, UITextViewDelegate {
     }
 }
 
-
 // MARK: -  Socket implement
 extension MessagesVC: WebSocketEndpointDelegate {
     
@@ -162,6 +161,8 @@ extension MessagesVC: WebSocketEndpointDelegate {
     
     func chatCallbackMethod(_ dict: SocketModel) {
         DispatchQueue.main.async {
+            self.vwProperties.imgVwTyping.isHidden = true
+            self.scrollToBottomTblVw(false)
             if dict.streamEvent == "text_stream" || dict.streamEvent == "stream_end" {
                 if self.objMessagesVM.isNewMsg {
                     let requestEmpty = MessageModel(textMessage: dict.message,isSender: false, dateTime: getStringFromDate(date: Date(), needFormat: "hh:mm a"),messageId: dict.message_id)
@@ -201,13 +202,16 @@ extension MessagesVC: WebSocketEndpointDelegate {
             } else {
                 self.vwProperties.messageTxtVw.isUserInteractionEnabled = true
                 self.objMessagesVM.isNewMsg = true
+                self.vwProperties.imgVwTyping.isHidden = true
             }
         }
     }
     
     func chatErrorMessage(_ dict: SocketModel){
+        self.vwProperties.imgVwTyping.isHidden = true
     }
     
     func socketDisconnectedError() {
+        self.vwProperties.imgVwTyping.isHidden = true
     }
 }

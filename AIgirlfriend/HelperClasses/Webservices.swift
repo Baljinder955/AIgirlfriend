@@ -189,7 +189,7 @@ class WebServices: NSObject {
                                 UIApplication.shared.windows.first?.rootViewController?.present(alertController, animated: true, completion: nil)
                             } else if response.response?.statusCode == 400 {
                                 if response.value is [String:Any]{
-                                    //                                                                        VwController.showToast(message: dict["message"] as? String ?? "", font: UIFont.boldSystemFont(ofSize: 17.0))
+                                    //VwController.showToast(message: dict["message"] as? String ?? "", font: UIFont.boldSystemFont(ofSize: 17.0))
                                 }
                             }
                         }

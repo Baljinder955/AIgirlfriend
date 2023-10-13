@@ -21,9 +21,11 @@ final class WebSocketFile: NSObject {
     var delegateChat: WebSocketEndpointDelegate?
     
     var socketURL = "wss://onlyfantasy-ai.ecomempire.in/api/v1/"
+    var socketURLNew = "wss://onlyfantasy-ws.ecomempire.in/api/v1/"
+    
     
     init(path: String) {
-        let socketPath = "\(socketURL)\(path)"
+        let socketPath = "\(socketURLNew)\(path)"
         let url = URL(string: socketPath)!
         debugPrint("Socket connect url :- ",socketPath)
         let request = URLRequest(url: url)
@@ -90,7 +92,6 @@ extension WebSocketFile: SRWebSocketDelegate {
     func webSocket(_ webSocket: SRWebSocket, didReceivePong pongPayload: Data?) {
         debugPrint("WS: Did receive pong payload: \(pongPayload.debugDescription)")
     }
-    
 }
 
 func getValueInDictionary(_ messageStr: String,completion:@escaping(_ dict: NSDictionary) -> Void) {
